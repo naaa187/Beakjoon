@@ -1,15 +1,13 @@
 #include<stdio.h>
 
 int main() {
-	int A, B, C;
+	int A, B, C, n;
 	scanf("%d %d %d", &A, &B, &C);
-	int n = 0;
-	if (B > C) {
+	n = 0;
+	if (B >= C) {
 		printf("%d", -1);
 		exit(0);
 	}
-	while (n * C <= A + B * n) {
-		n++;
-	}
+	n = A / (C - B) + 1;
 	printf("%d", n);
 }
